@@ -2,8 +2,8 @@ const hamburger = document.querySelector('#hamburger');
 const navBar = document.querySelector('#mobile-navbar');
 const headline = document.querySelector('#headline');
 const body = document.querySelector('body');
-const projectsDiv = docuent.getElementById('works');
-const popupOverlay =- document.querySelector('#popup-overlay');
+const projectsDiv = document.getElementById('works');
+const popupOverlay = document.querySelector('#popup-overlay');
 const projectCards = [
   {
     name: 'Tonic',
@@ -60,7 +60,7 @@ document.querySelectorAll('.mobile-nav-link').forEach((link) => link.addEventLis
 projectCards.forEach((project) => {
   const projectCard = document.createElement('div');
   projectCard.className = 'project';
-  projectCard.innerHTML = ''`<img class='project-screenshot' src='${
+  projectCard.innerHTML = `<img class='project-screenshot' src='${
     project.image
   }' alt='screenshot of Tonic project'> <div class='project-div'> <h2 class='project-title'>${
     project.name
@@ -114,7 +114,7 @@ function populatePopupWindow(index) {
   </div>
 </div>`;
   popupOverlay.style.display = 'block';
-}\
+}
 
 const projectBtn = document.querySelectorAll('.project .enabled-btn');
 projectBtn.forEach((btn) => btn.addEventListener('click', () => {
